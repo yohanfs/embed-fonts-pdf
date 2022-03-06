@@ -1,31 +1,4 @@
 #+startup: overview
 #+title: Embed Fonts of PDF
 
-pdf-to-ps:
-	pdf2ps main.pdf
-
-ps-to-pdf:
-	ps2pdf \
-        -dPDFSETTINGS=/prepress \
-        -dSubsetFonts=true \
-        -dEmbedAllFonts=true \
-        -dMaxSubsetPct=100 \
-        -dCompatibilityLevel=1.4 main.pdf
-
-extract-bookmark:
-	pdftk main.pdf dump_data output bookmarkdata.txt
-
-insertt-bookmark:
-	pdftk mypdf.pdf update_info bookmarksdata.txt output mainbookmarked.pdf 
-
-deletetype3:
-	gs -o output.pdf -dNoOutputFonts -sDevice=pdfwrite main.pdf
-
-pdffont-check:
-	pdffonts main.pdf
-
- 
-
-    
-
-
+Semua /command/ ada di Makefile. 
